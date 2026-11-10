@@ -1,0 +1,703 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: rgb(30, 56, 30);
+    --secondary: #0E2A16;
+    --design: #D0A421;
+    --background: #FFFFFF;
+    --text: #2D2834;
+    --headings: rgb(238, 241, 195);
+
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto repeat(5, 1fr) auto;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.site-header {
+    display: flex;
+    background-color: var(--secondary);
+    color: var(--headings);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: sticky;
+    top: 0;
+}
+
+
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    
+}
+
+.main-nav ul li {
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--headings);
+    font-size: large;
+    font-weight: bold;
+
+}
+
+.main-nav ul {
+    display: inline-flex;
+    gap: 25px;
+    
+}
+
+#specific {
+    border: 1px solid var(--design);
+    border-radius: 15px;
+    padding: 5px 20px;
+}
+
+#specific:hover {
+    background-color: var(--design);
+}
+
+#specific a {
+    color: var(--design);
+}
+
+#specific a:hover {
+    color: var(--secondary);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem;
+    padding-bottom: 7rem;
+    gap: 1rem;
+    background-color: var(--primary);
+    border-bottom: solid 1px var(--primary);
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    font-family: sans-serif;
+}
+
+.hero-content h1 {
+    color: var(--headings);
+    font-size: 4.1rem;
+    font-weight: bolder;
+}
+
+.hero-content p {
+    color: wheat;
+    font-weight: bold;
+}
+
+.hero-content a {
+    text-decoration: none;
+    color: var(--secondary);
+    background-color: var(--design);
+    padding: 15px 40px;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 30px;
+    
+}
+
+.btn-primary {
+    display: inline-block;
+    transition: transform 0.5s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.015);
+
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 13px rgba(0, 0, 0, 0.03);
+}
+
+#middle-btn {
+    margin-top: 3rem;
+}
+
+.philosophy-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.philosophy-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 720px;
+    height: 300px;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    padding: 3rem 2rem;
+    border-radius: 25px;
+    gap: 30px;
+    background-color: rgb(236, 231, 231);
+    border: 1px solid rgb(179, 171, 171);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.philosophy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.015);
+    border-color: #bbb;
+}
+
+.section-title {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    color: rgb(16, 97, 16);
+    font-size: 1.5rem;
+    align-items: center;
+
+}
+
+.philosophy-card p {
+    color: rgb(88, 87, 87);
+    font-size: 17px;
+}
+
+.features-section {
+    background-color: rgb(236, 231, 231);
+}
+
+.features-section h2 {
+    text-align: center;
+    margin: 3rem;
+    color: rgb(16, 97, 16);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-card {
+    border: 1px solid rgb(179, 171, 171);
+    border-radius: 10px;
+    height: 230px;
+    width: 250px;
+    text-align: center;
+    padding-top: 50px;
+    background-color: var(--background);
+    transition: transform 0.6 ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+
+}
+
+.feature-card:hover {
+    transform: translateY(10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.015);
+}
+
+.feature-icon {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    margin: 10px;
+    color: var(--text);
+    font-weight: bolder;
+
+}
+
+.feature-card p {
+    line-height: 25px;
+    padding: 0 20px;
+    color: var(--text);
+}
+
+.gallery-section {
+    background-color: var(--background);
+    padding: 3rem;
+}
+
+.hedding-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(16, 97, 16);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding: 3.5rem;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+.gallery-item {
+    border: 1px solid rgb(179, 171, 171);
+    border-radius: 10px;
+    height: 200px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5 ease;
+
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+}
+
+.image-placeholder {
+    width: 249px;
+    height: 149px;
+    background-color: rgb(73, 114, 73);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+
+}
+
+.gallery-item p {
+    text-align: center;
+    border: 1px solid rgb(179, 171, 171);
+    padding: 15px;
+    height: 50px;
+    background-color: rgb(240, 217, 217);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: bolder;
+    color: rgb(16, 97, 16);
+}
+
+.cta-section {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    gap: 2rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    height: 400px;
+    margin-bottom: 0;
+}
+
+.cta-section h2 {
+    font-size: 3rem;
+    color: rgb(16, 97, 16);
+    color: ghostwhite;
+}
+
+.cta-section p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text);
+    width: 50%;
+    text-align: center;
+    color: wheat;
+}
+
+.btn-cta {
+    border: 1px solid var(--background);
+    padding: 10px 50px;
+    margin-top: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: var(--secondary);
+    background-color: ghostwhite;
+}
+
+.btn-cta:hover {
+    background-color: var(--design);
+    border: 1px solid var(--design);
+    color: var(--background);
+}
+
+.site-footer {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: var(--secondary);
+    margin-top: -42px;
+    
+
+}
+
+.footer-nav ul {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 25px;
+    
+}
+
+.footer-nav ul li {
+    list-style: none;
+    
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: rgb(196, 177, 143);
+}
+
+.footer-nav ul li a:hover {
+    color: var(--design);
+}
+
+
+.site-footer p {
+    color: rgb(196, 177, 143);
+}
+
+@media (max-width: 1024px) {
+    .site-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .main-nav ul {
+        gap: 15px;
+    }
+
+    .main_nav ul li a{
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        padding: 3.5rem 2rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .philosophy-card {
+        width: 90%;
+        max-width: 720px;
+        height: auto;
+        min-height: 280px;
+        padding: 2.5rem 2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 2rem;
+    }
+
+    .gallery-item {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .image-placeholder {
+        width: 100%;
+        height: 160px;
+    }
+
+    .cta-section h2 {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    .cta-section p {
+        width: 70px;
+        font-size: 1.25rem;
+    }
+
+    .site-footer {
+        padding: 25px 2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        gap: 1rwem;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .main-nav ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 0;
+    }
+
+    .main-nav ul li a {
+        font-size: 0.95rem;
+    }
+
+    #specific {
+        padding: 5px 15px;
+    }
+
+    .hero-content {
+        padding: 2.5rem 1.25rem;
+        padding-bottom: 3rem;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+        line-height: 1.25;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .hero-content a {
+        padding: 12px 28px;
+        font-size: 1rem;
+    }
+
+    #middle-btn {
+        margin-top: 2rem;
+    }
+
+    .philosophy-section {
+        padding: 0 1rem;
+    }
+
+    .philosophy-card {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 2rem 1.25rem;
+        gap: 20px;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .philosophy-card p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .features-section h2{
+        font-size: 1.6rem;
+        margin: 2rem 1rem; 
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem 2rem;
+        gap: 20px;
+    }
+
+    .feature-card {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        min-height: 200px;
+        padding: 2rem 1rem;
+        margin: 0 auto;
+    }
+
+    .feature-card:hover {
+        transform: translateY(5px)
+    }
+
+    .gallery-section {
+        padding: 2rem 1rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem 0;
+        gap: 1.5rem;
+    }
+
+    .gallery-item {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.03);
+    }
+
+    .hedding-btn {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .cta-section {
+        height: auto;
+        min-height: 350px;
+        padding: 3rem 1.25rem;
+        gap: 1.5rem;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .cta-section p {
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .btn-cta {
+        padding: 10px 35px;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 25px 1rem;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .footer-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    .site-footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 0.75rem;
+    }
+
+    .main-nav ul {
+        gap: 8px;
+    }
+
+    .main-nav ul li a {
+        font-size: 0.85rem;
+    }
+
+    .hero-content {
+        padding: 2rem 1rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-content a {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+    }
+
+    #middle-btn {
+        margin-top: 1,5rem;
+    }
+
+    .philosophy-card {
+        padding: 1.5rem 1rem;
+        border-radius: 18px;
+    }
+
+    .section-title {
+        font-size: 1.05rem;
+        flex-wrap: wrap;
+    }
+
+    .philosophy-card p {
+        font-size: 14px;
+    }
+
+    .features-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .feature-icon {
+        font-size: 0.95rem;
+    }
+
+    .feature-card p {
+        font-size: 0.9rem;
+        line-height: 22px;
+        padding: 0 12px;
+    }
+
+    .hedding-btn {
+        font-size: 0.9rem;
+    }
+
+    .gallery-item p {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .cta-section {
+        padding: 2.5rem 1rem
+    }
+
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-section p {
+        font-size: 0.95rem;
+    }
+
+    .btn-cta {
+        padding: 10px 30px;
+        font-size: 0.9rem;
+    }
+
+    .site-footer p,
+    .footer-nav ul li a {
+        font-size: 0.85rem;
+    }
+
+    .body {
+        max-height: 300px;
+    }
+
+}
+
+
